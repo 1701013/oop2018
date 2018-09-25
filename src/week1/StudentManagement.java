@@ -18,11 +18,16 @@ public class StudentManagement {
             System.out.println(arrSv[j].getName() + " ");
         }
     }
-    public boolean sameGroup(Student s1, Student s2) {
+    /*public boolean sameGroup(Student s1, Student s2) {
         // TODO:
         String gr1 = s1.getGroup();
         String gr2 = s2.getGroup();
         return gr1.equals(gr2);// xóa dòng này sau khi cài đặt
+    }*/
+    public static boolean sameGroup(Student s1, Student s2)
+    {
+
+        return s1.getGroup().equals(s2.getGroup());
     }
 
     void studentsByGroup() {
