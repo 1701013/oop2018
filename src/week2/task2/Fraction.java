@@ -50,7 +50,8 @@ public class Fraction {
         if (k.denom == 1) System.out.println("Ket qua cong hai phan so: " + k.nume);
         else
             System.out.println("Ket qua Cong: " + k.nume + "/" + k.denom);
-        return null;
+        k.toigian();
+        return k;
 
     }
 
@@ -65,7 +66,8 @@ public class Fraction {
         if (k.denom == 1) System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume);
         else
             System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
-        return null;
+        k.toigian();
+        return k;
     }
 
     public Fraction multiply(Fraction other) {
@@ -77,7 +79,8 @@ public class Fraction {
         if (f1.denom == 1) System.out.println("Ket qua nhan hai phan so: " + f1.nume);
         else
             System.out.println("Ket qua nhan hai phan so: " + f1.nume + "/" + f1.denom);
-        return null;
+        f1.toigian();
+        return f1;
     }
 
     public Fraction divide(Fraction other) {
@@ -89,7 +92,8 @@ public class Fraction {
         if (k.denom == 1) System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume);
         else
             System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
-        return null;
+        k.toigian();
+        return k;
     }
 
     //@Override
