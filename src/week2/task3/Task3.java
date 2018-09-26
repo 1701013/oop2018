@@ -1,8 +1,11 @@
 package week2.task3;
+//import java.util.Scanner;
+    public class Task3{}
 
-public class Task3 {
-}     
-  class Hinhchunhat {// class mô tả về hình vuông
+
+
+
+    class Hinhchunhat {// class mô tả về hình vuông
         private
         int chieudai;
         int chieurong;
@@ -55,6 +58,10 @@ public class Task3 {
             this.chieurong = chieurong;
         }
 
+        public void In1() {
+
+
+        }
 
         public boolean check() {// kiem tra xem co là hinh vuong khong
             if (chieurong==chieudai) {
@@ -75,8 +82,8 @@ public class Task3 {
         }
 
         public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
-            Hinhchunhat square = new Hinhchunhat(Integer.parseInt(input.nextLine()), Integer.parseInt(input.nextLine()));
+            //Scanner input = new Scanner(System.in);
+            Hinhchunhat square = new Hinhchunhat(5, 6);
             square.check();
             /*if (check() == true) {
                 System.out.println("Chu vi của hinh vuong là: ");
@@ -183,10 +190,11 @@ public class Task3 {
             }
         }
         public static void main(String[] args){
-            Scanner input = new Scanner(System.in);
+            //Scanner input = new Scanner(System.in);
             Market mon1=new Market("mi goi", 7000);
             Market mon2 =new Market("notebook",14000);
-            Market tong = new Market(mon1.giaban+mon2.giaban, Integer.parseInt(input.nextLine()));
+            System.out.println("Nhap vao so tien ban tra cua hang: ");
+            Market tong = new Market(mon1.giaban+mon2.giaban, 100000);
 
             tong.du(tong.tientra,tong.tongtien);
         }
@@ -280,13 +288,8 @@ public class Task3 {
             grap driver1= new grap("29A1659",100,1);
             grap driver2 = new grap("29B6798",500,5);
             System.out.println("Tai xe xe "+ driver1.nameOfDriver1+ "hien dang cach ban "+ driver1.far2+ "m nữa trong " +driver1.time+ " phut");
-            System.out.println("Tai xe xe "+ driver2.nameOfDriver1+ "hien dang cach ban "+ driver2.far2+ "m nữa trong " +driver2.time+ " phut");
-            System.out.println("Moi ban chon tai xe: 1 Or 2.");
-            Scanner input = new Scanner(System.in);
-            int a = Integer.parseInt(input.nextLine());
-            if(a==1)System.out.println("Tai xe cach ban con "+driver1.time+" phut nua");
-            else System.out.println("Tai xe cach ban con "+driver2.time+" phut nua");
+
+
         }
     }
 
-//TODO: khai báo 3 class tương ứng với 3 đối tượng thực tế ở dưới
