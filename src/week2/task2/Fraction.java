@@ -32,24 +32,7 @@ public class Fraction {
         this.denom = denom;// TODO: khởi tạo giá trị cho các thuộc tính numberator (tử số), denominator (mẫu số)
     }
 
-    /*public static int gcd(int a, int b) {
-
-        while (b != 0) {
-            int r = a % b;
-            a = b;
-            b = r;
-        }
-        return a;
-
-
-    }
-
-    public void rutGon() {
-        int i = gcd(this.getNume(), this.getDenom());
-        this.setNume(this.getNume() / i);
-        this.setDenom(this.getDenom() / i);
-    }*/
-
+    
     public Fraction add(Fraction other) {
         /*Fraction ps = new Fraction();
         ps.nume = other.getDenom()*nume+denom* other.getNume();
@@ -63,9 +46,13 @@ public class Fraction {
         else
             System.out.println("Ket qua Cong: " + k.nume + "/" + k.denom);
         return null;
+
     }
 
+    ;
+
     public Fraction subtract(Fraction other) {
+
         /*Fraction ps1 = new Fraction();
         ps1.nume = other.getDenom()*nume-denom* other.getNume();
         ps1.denom = other.getDenom()*denom;
@@ -82,6 +69,7 @@ public class Fraction {
     }
 
     public Fraction multiply(Fraction other) {
+
         /*Fraction ps2;// = new Fraction();
         ps2.nume = other.getNume()*nume;
         ps2.denom = other.getDenom()*denom;
@@ -114,23 +102,11 @@ public class Fraction {
     }
 
     //@Override
-    public boolean equals(Object obj) {
-        // Nếu other = null thì trả về false.
-        if (obj == null) {
-            return false;
-        }
-        // Nếu 'other' không phải là kiểu Fraction
-        // thì trả về false.
-        if (!(obj instanceof Fraction)) {
-            return false;
-        }
-
-        Fraction otherN = (Fraction) obj;
-
-        if (this.nume/ otherN.nume == this.denom / otherN.denom) {
-            return true;
-        }
-        return false;
+    public boolean Equals(Object obj) {
+        Fraction p2= new Fraction(1,1);
+        p2= this.subtract((Fraction)obj);
+        if(p2.nume*p2.denom==0)return true;
+        else return false;
         //return super.equals(obj);
     }
 
@@ -146,9 +122,9 @@ public class Fraction {
         p1.divide(p2);
         p1.multiply(p2);
         p1.subtract(p2);
-       // p1.rutGon();
+        // p1.rutGon();
         //p2.rutGon();
-        if (p1.equals(p2) == true)
+        if (p1.Equals(p2)==true)
             System.out.println("Hai phan so bang nhau");
 
         else
