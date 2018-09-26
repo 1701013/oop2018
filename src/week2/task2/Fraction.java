@@ -120,25 +120,25 @@ public class Fraction {
     }
 
     //@Override
-    /*public boolean equals(Object other) {
+    public boolean equals(Object obj) {
         // Nếu other = null thì trả về false.
-        if (other == null) {
+        if (obj == null) {
             return false;
         }
         // Nếu 'other' không phải là kiểu Fraction
         // thì trả về false.
-        if (!(other instanceof Fraction)) {
+        if (!(obj instanceof Fraction)) {
             return false;
         }
 
-        Fraction otherN = (Fraction) other;
+        Fraction otherN = (Fraction) obj;
 
         if (this.nume == otherN.nume && this.denom == otherN.denom) {
             return true;
         }
         return false;
         //return super.equals(obj);
-    }*/
+    }
 
     public static void main(String[] agrs) {
         Scanner input = new Scanner(System.in);
