@@ -90,8 +90,9 @@ public class Task1 {
         }
         return (n);
     }
-    public static int fibonacci_thu_n(int n) {
-        if ((n == 1) || (n == 2)) {
+    public static int fibonacci(int n) {
+        if(n==0) return 0;
+        else if ((n == 1) || (n == 2)) {
             return 1;
         } else {
             int arr[] = new int[n];
@@ -118,7 +119,7 @@ public class Task1 {
         int n = nhapSoTN();
 
         System.out.println("Số Fibonacci thứ " + n + " là: ");
-        System.out.println(fibonacci_thu_n(n));
+        System.out.println(fibonacci(n));
     }
 
 
