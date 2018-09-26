@@ -1,6 +1,5 @@
 package week2.task2;
-
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Fraction {
 
@@ -32,42 +31,37 @@ public class Fraction {
         this.nume = nume;
         this.denom = denom;// TODO: khởi tạo giá trị cho các thuộc tính numberator (tử số), denominator (mẫu số)
     }
-    public static int gcd(int a, int b) {
-        //int ucln(int a, int b){
-            /*if(a==0&&b==0)return -1;
-            else {
-                if(b==0)return a;
-                else return gcd(b, b%a);
-                // TODO: Tính ước chung lớn nhất của 2 số a, b
-            }*/
-        while (b!=0)
-        {
-            int r=a%b;
-            a=b;
-            b=r;
+
+    /*public static int gcd(int a, int b) {
+
+        while (b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
         }
         return a;
 
 
     }
-    public void rutGon()
-    {
-        int i=gcd(this.getNume(),this.getDenom());
-        this.setNume(this.getNume()/i);
-        this.setDenom(this.getDenom()/i);
-    }
+
+    public void rutGon() {
+        int i = gcd(this.getNume(), this.getDenom());
+        this.setNume(this.getNume() / i);
+        this.setDenom(this.getDenom() / i);
+    }*/
+
     public Fraction add(Fraction other) {
         /*Fraction ps = new Fraction();
         ps.nume = other.getDenom()*nume+denom* other.getNume();
         ps.denom = other.getDenom()*denom;// TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         return ps;*/
-        int a=(this.getNume()*other.getDenom()) + (other.getNume()*this.getDenom());
-        int b=other.getDenom()*this.getNume();
-        Fraction k=new Fraction(a,b);
-        k.rutGon();
-        if(k.denom==1)System.out.println("Ket qua cong hai phan so: " + k.nume);
+        int a = (this.getNume() * other.getDenom()) + (other.getNume() * this.getDenom());
+        int b = other.getDenom() * this.getNume();
+        Fraction k = new Fraction(a, b);
+        //k.rutGon();
+        if (k.denom == 1) System.out.println("Ket qua cong hai phan so: " + k.nume);
         else
-        System.out.println("Ket qua Cong: " + k.nume + "/" + k.denom);
+            System.out.println("Ket qua Cong: " + k.nume + "/" + k.denom);
         return null;
     }
 
@@ -77,13 +71,13 @@ public class Fraction {
         ps1.denom = other.getDenom()*denom;
         return ps1;// TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
         //return null;*/
-        int a=(this.getNume()*other.getDenom()) - (other.getNume()*this.getDenom());
-        int b=other.getDenom()*this.getNume();
-        Fraction k=new Fraction(a,b);
-        k.rutGon();
-        if(k.denom==1)System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume);
+        int a = (this.getNume() * other.getDenom()) - (other.getNume() * this.getDenom());
+        int b = other.getDenom() * this.getNume();
+        Fraction k = new Fraction(a, b);
+        //k.rutGon();
+        if (k.denom == 1) System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume);
         else
-        System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
+            System.out.println("Ket qua tru phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
         return null;
     }
 
@@ -93,13 +87,13 @@ public class Fraction {
         ps2.denom = other.getDenom()*denom;
         return ps2;// TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         //return null;*/
-        int a=(this.getNume()*other.getNume());
-        int b=other.getDenom()*this.getDenom();
-        Fraction k=new Fraction(a,b);
-        k.rutGon();
-        if(k.denom==1)System.out.println("Ket qua nhan hai phan so: " + k.nume);
+        int a = (this.getNume() * other.getNume());
+        int b = other.getDenom() * this.getDenom();
+        Fraction k = new Fraction(a, b);
+        //k.rutGon();
+        if (k.denom == 1) System.out.println("Ket qua nhan hai phan so: " + k.nume);
         else
-        System.out.println("Ket qua nhan hai phan so: " + k.nume + "/" + k.denom);
+            System.out.println("Ket qua nhan hai phan so: " + k.nume + "/" + k.denom);
         return null;
     }
 
@@ -109,13 +103,13 @@ public class Fraction {
         ps3.denom = other.getDenom()*nume;
         return ps3;// TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
         //return null;*/
-        int a=(this.getNume()*other.getDenom());
-        int b=other.getDenom()*this.getNume();
-        Fraction k=new Fraction(a,b);
-        k.rutGon();
-        if(k.denom==1)System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume);
+        int a = (this.getNume() * other.getDenom());
+        int b = other.getDenom() * this.getNume();
+        Fraction k = new Fraction(a, b);
+        //k.rutGon();
+        if (k.denom == 1) System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume);
         else
-        System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
+            System.out.println("Ket qua chia phan so thu nhat cho phan so thu hai: " + k.nume + "/" + k.denom);
         return null;
     }
 
@@ -133,29 +127,27 @@ public class Fraction {
 
         Fraction otherN = (Fraction) obj;
 
-        if (this.nume == otherN.nume && this.denom == otherN.denom) {
+        if (this.nume/ otherN.nume == this.denom / otherN.denom) {
             return true;
         }
         return false;
         //return super.equals(obj);
     }
 
-    public static void main(String[] agrs) {
-        Scanner input = new Scanner(System.in);
-        //Fraction p1=new Fraction(Integer.parseInt(input.nextLine()),);
 
-        Fraction p1 = new Fraction(Integer.parseInt(input.nextLine()), Integer.parseInt(input.nextLine()));
-        Fraction p2 = new Fraction(Integer.parseInt(input.nextLine()), Integer.parseInt(input.nextLine()));
-        //p1.setNume(Integer.parseInt(input.nextLine()));
-        //p1.setDenom(Integer.parseInt(input.nextLine()));
-        //p2.setNume(Integer.parseInt(input.nextLine()));
-        //p2.setDenom(Integer.parseInt(input.nextLine()));
+    public static void main(String[] agrs) {
+        //Scanner input = new Scanner(System.in);
+
+
+        Fraction p1 = new Fraction(1, 2);
+        Fraction p2 = new Fraction(4, 5);
+
         p1.add(p2);
         p1.divide(p2);
         p1.multiply(p2);
         p1.subtract(p2);
-        p1.rutGon();
-        p2.rutGon();
+       // p1.rutGon();
+        //p2.rutGon();
         if (p1.equals(p2) == true)
             System.out.println("Hai phan so bang nhau");
 
@@ -163,5 +155,3 @@ public class Fraction {
             System.out.println("Hai phan so khong bang nhau");
     }
 }
-
-
