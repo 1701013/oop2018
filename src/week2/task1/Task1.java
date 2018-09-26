@@ -5,10 +5,10 @@ import java.util.Scanner;// import gói nhập xuất dữ liệu
 public class Task1 {
     //private :
     public
-    int a;
-    int b;
-    int n;
-    //public :
+        int a;
+        int b;
+        int n;
+    { //public :
 
     /*public double getN() {
         return n;
@@ -33,7 +33,7 @@ public class Task1 {
     public void setA(int a) {
         this.a = a;
     }
-*/
+*/}
     public static int gcd(int a, int b) {
         //int ucln(int a, int b){
             /*if(a==0&&b==0)return -1;
@@ -53,7 +53,7 @@ public class Task1 {
 
     }
 
-    /*public static int kiemtra(int k) {
+       /*public static int kiemtra(int k) {
 
         //Scanner input = new Scanner(System.in);
         boolean check = false;
@@ -72,7 +72,7 @@ public class Task1 {
         }
         return (k);
     }*/
-    public static int nhapSoTN() {
+    /*public static int nhapSoTN() {
         Scanner input = new Scanner(System.in);
         boolean check = false;
         int n = 0;
@@ -89,9 +89,9 @@ public class Task1 {
             }
         }
         return (n);
-    }
+    }*/
     public static int fibonacci(int n) {
-        if(n==0) return 0;
+        if(n==0)return 0;
         else if ((n == 1) || (n == 2)) {
             return 1;
         } else {
@@ -101,29 +101,27 @@ public class Task1 {
             for (int i = 2; i < arr.length; i++) {
                 arr[i] = arr[i - 1] + arr[i - 2];
             }
-            return arr[n-1];// TODO: Tìm số fibonacci ở vị trí n
+            return arr[n-1];// TODO:1
+            // Tìm số fibonacci ở vị trí n
         }
 
     }
 
     public static void main(String[] args) {
-        //Scanner inp = new Scanner(System.in);////tao doi tuong inp thuoc lop Scanner
-        System.out.println("Nhập số tự nhiên a: ");
-        int a = nhapSoTN();
+       //Scanner inp = new Scanner(System.in);////tao doi tuong inp thuoc lop Scanner
+       // System.out.println("Nhập số tự nhiên a: ");
+        //int a = nhapSoTN();
 
-        System.out.println("Nhập số tự nhiên b: ");
-        int b = nhapSoTN();
+        //System.out.println("Nhập số tự nhiên b: ");
+        //int b = nhapSoTN();
 
-        System.out.println("Uoc chung lon nhat cua a va b là: " + gcd(a,b));
-        System.out.println("Nhập số tự nhiên n: ");
-        int n = nhapSoTN();
+        System.out.println("Uoc chung lon nhat cua 30 va 9 là: " + gcd(30,9));
+        //System.out.println("Nhập số tự nhiên n: ");
+        //int n = nhapSoTN();
 
-        System.out.println("Số Fibonacci thứ " + n + " là: ");
-        System.out.println(fibonacci(n));
+        System.out.println("Số Fibonacci thứ 0 là: ");
+        System.out.println(fibonacci(0));
     }
 
 
 }
-
-
-
