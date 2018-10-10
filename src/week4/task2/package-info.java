@@ -7,3 +7,18 @@
  * @version 0.1
  */
 package week4.task2;
+
+
+ class Test{
+    public static void main(String[] args ){//kiem tra tinh ke thừa
+        Circle ci =new Circle(1);
+        ci.toString();
+        Rectangle re= new Rectangle("red",true,1.0 ,1.0);
+        re.toString();
+        Square sq= new Square("blue",true,0);
+        sq.toString();
+        Shape sh = new Shape("red",true);
+        sh.toString();
+    }
+
+}

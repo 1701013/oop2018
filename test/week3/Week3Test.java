@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static week3.Week3.max;
 
-public class Week3Test {
+/*public class Week3Test {
     int result=0;
     int[] array1={1,6,9,8,75,51};
     int[] array2={45,8,65,2,4,9551,5,2,4};
@@ -113,4 +113,5 @@ public class Week3Test {
     }
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
 }
+*/
 
