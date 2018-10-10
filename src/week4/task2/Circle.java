@@ -37,14 +37,14 @@ class Circle extends Shape {//Circle"IS-A"Shape
         /** tính diện tích hình tròn
          * trả về diện tích
          */
-        return radius * radius;
+        return radius * radius*Math.PI;
     }
 
     public double getPerimeter() {
         /** tính chu vi hình tròn
          * trả về chu vi
          */
-        return (2 * radius) ;
+        return (2 * radius)*Math.PI ;
     }
 
     @Override
