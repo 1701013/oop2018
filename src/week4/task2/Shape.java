@@ -2,9 +2,13 @@
  * class Shape là class ban đầu
  * @author Ngo Thi Hoai Thanh
  */
+
 package week4.task2;
+import java.awt.*;
+import java.util.Random;
 
     public class Shape{
+
     private String color ;
     private boolean filled ;
 
