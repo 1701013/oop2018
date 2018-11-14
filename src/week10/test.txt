@@ -1,0 +1,152 @@
+public static  String readContentFromFile(String path) {
+        
+
+        
+        }public static void writeContentToFile(String path, String s, boolean b){
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+
+            String content = s;
+            bw.write(content);
+
+
+
+            
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+
+    }public static void writeToFile(String path, String s, boolean b){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
+            String content = s;
+            bw.write(content);
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }public static File findFileByName(String folderPath, String fileName){
+        int n=0;
+        int m=0;
+        File file = new File(folderPath);
+        if (file.exists()) {
+            if (file.isFile()) {
+                if (file.getName().endsWith(fileName)) {
+                    System.out.println(file.getAbsolutePath() + "\n");
+                    n++;
+                }
+                else{
+                m++;}
+
+            }
+
+
+                
+                
+                File[] listFile = file.listFiles();
+             if (listFile != null) {
+                    for (File f : listFile) {
+                        findFileByName(f.getAbsolutePath(), fileName);
+                    }
+                }
+                
+            if(n==m){System.out.println("Không tìm thấy ");}
+            }
+
+        else {
+            System.out.println("source không tồn tại");
+        }
+        return null;
+    }public static void main(String[] args) {
+        String path = "src\\week7\\task2\\task2.txt";
+        System.out.println( readContentFromFile(path ) );
+         writeContentToFile(path, "src\\week10\\test.txt", true) ;
+        System.out.println( readContentFromFile(path ) );
+        writeToFile(path,"Write to File", true);
+        System.out.println( readContentFromFile(path ) );
+        findFileByName("src\\week7\\task2","task2.txt");
+        findFileByName("src\\week10","OOP.txt");
+        findFileByName("src\\week7\\task2","task3.txt");
+
+    } 
+public static  String readContentFromFile(String path) {
+        
+
+        
+        } 
+public static void writeContentToFile(String path, String s, boolean b){
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+
+            String content = s;
+            bw.write(content);
+
+
+
+            
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+
+    } 
+public static void writeToFile(String path, String s, boolean b){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
+            String content = s;
+            bw.write(content);
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } 
+public static File findFileByName(String folderPath, String fileName){
+        int n=0;
+        int m=0;
+        File file = new File(folderPath);
+        if (file.exists()) {
+            if (file.isFile()) {
+                if (file.getName().endsWith(fileName)) {
+                    System.out.println(file.getAbsolutePath() + "\n");
+                    n++;
+                }
+                else{
+                m++;}
+
+            }
+
+
+                
+                
+                File[] listFile = file.listFiles();
+             if (listFile != null) {
+                    for (File f : listFile) {
+                        findFileByName(f.getAbsolutePath(), fileName);
+                    }
+                }
+                
+            if(n==m){System.out.println("Không tìm thấy ");}
+            }
+
+        else {
+            System.out.println("source không tồn tại");
+        }
+        return null;
+    } 
+public static void main(String[] args) {
+        String path = "src\\week7\\task2\\task2.txt";
+        System.out.println( readContentFromFile(path ) );
+         writeContentToFile(path, "src\\week10\\test.txt", true) ;
+        System.out.println( readContentFromFile(path ) );
+        writeToFile(path,"Write to File", true);
+        System.out.println( readContentFromFile(path ) );
+        findFileByName("src\\week7\\task2","task2.txt");
+        findFileByName("src\\week10","OOP.txt");
+        findFileByName("src\\week7\\task2","task3.txt");
+
+    }
