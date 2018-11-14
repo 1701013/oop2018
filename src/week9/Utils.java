@@ -3,12 +3,8 @@ package week9;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
 import java.util.stream.Stream;
-
-import static javax.script.ScriptEngine.FILENAME;
 
 public class Utils {
     public static  String readContentFromFile(String path) {
@@ -48,12 +44,11 @@ public class Utils {
             return contentBuilder.toString();
         }
 
-    public static void writeContentToFile(String path){
+    public static void writeContentToFile(String path, String s, boolean b){
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
 
-            String content = "OOP week9\n";
-
+            String content = s;
             bw.write(content);//tự đong file
 
 
@@ -68,9 +63,9 @@ public class Utils {
 
 
     }
-    public static void writeToFile(String path){
+    public static void writeToFile(String path, String s, boolean b){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
-            String content = "Write to file\n";
+            String content = s;
             bw.write(content);
             //System.out.println("Xong");
         } catch (IOException e) {
@@ -78,13 +73,18 @@ public class Utils {
         }
     }
     public static File findFileByName(String folderPath, String fileName){
+        int n=0;
+        int m=0;
         File file = new File(folderPath);
         if (file.exists()) {
             if (file.isFile()) {
                 if (file.getName().endsWith(fileName)) {
                     System.out.println(file.getAbsolutePath() + "\n");
+                    n++;
                 }
-                else{System.out.println("Không tìm thấy ");}
+                else{//System.out.println("Không tìm thấy ");
+                m++;}
+
             }
 
 
@@ -97,7 +97,7 @@ public class Utils {
                     }
                 }
                 //false(là thư mục) ->kiểm tra trong thư mục có file == file Name hay ko
-
+            if(n==m){System.out.println("Không tìm thấy ");}
             }
 
         else {
@@ -108,9 +108,9 @@ public class Utils {
     public static void main(String[] args) {
         String path = "src\\week7\\task2\\task2.txt";
         System.out.println( readContentFromFile(path ) );
-         writeContentToFile(path ) ;
+         writeContentToFile(path, "src\\week10\\test.txt", true) ;
         System.out.println( readContentFromFile(path ) );
-        writeToFile(path);
+        writeToFile(path,"Write to File", true);
         System.out.println( readContentFromFile(path ) );
         findFileByName("src\\week7\\task2","task2.txt");
         findFileByName("src\\week10","OOP.txt");// folderPath sai
